@@ -3,18 +3,18 @@ provider "aws" {
 }
 
 module "vpc" {
-  source       = "./modules/vpc"
+  source       = "./vpc"
   vpc_cidr     = "10.0.0.0/16"
 }
 
 module "private_subnet" {
-  source       = "./modules/subnet"
+  source       = "./subnet"
   vpc_id       = module.vpc.vpc_id
   subnet_cidr  = "10.0.1.0/24"
 }
 
 module "ec2_instance" {
-  source          = "./modules/ec2"
+  source          = "./ec2"
   subnet_id       = module.private_subnet.subnet_id
   instance_type   = "t3.medium"
   key_name        = "your_key_pair_name"
