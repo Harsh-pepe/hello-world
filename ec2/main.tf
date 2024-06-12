@@ -13,10 +13,10 @@ resource "aws_instance" "this" {
   }
 }
 
-output "instance_id" {
+output "instance_idd" {
   value = aws_instance.this.id
 }
 
-output "public_ip" {
+output "public_ipp" {
   value = aws_instance.this.public_ip
 }
