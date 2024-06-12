@@ -5,6 +5,6 @@ resource "aws_vpc" "this" {
   }
 }
 
-output "vpc_id" {
+output "vpc_idd" {
   value = aws_vpc.this.id
 }
