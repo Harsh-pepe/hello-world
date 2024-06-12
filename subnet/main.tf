@@ -7,6 +7,6 @@ resource "aws_subnet" "this" {
   }
 }
 
-output "subnet_id" {
+output "subnet_idd" {
   value = aws_subnet.this.id
 }
