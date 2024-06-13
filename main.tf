@@ -12,7 +12,7 @@ module "vpc" {
 module "private_subnet" {
   source       = "./subnet"
   vpc_id       = module.vpc.vpc_id
-  subnet_cidr  = "10.0.1.0/24"
+  private_subnet_cidr  = "10.0.1.0/24"
 }
 
 module "ec2_instance" {
